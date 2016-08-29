@@ -1,17 +1,15 @@
 fileFormatVersion: 2
-guid: 690f1a3c61d416442862eae7433a83c2
-timeCreated: 1472369661
+guid: dc8a20efc22db3f4d8147e9d2ca471bd
+timeCreated: 1472497057
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: default
-    100002: //RootNode
-    400000: default
-    400002: //RootNode
-    2300000: default
-    3300000: default
-    4300000: default
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Pitchfork
   materials:
     importMaterials: 1
     materialName: 0
