@@ -7,11 +7,17 @@ public class MeleeSystem : MonoBehaviour {
     public ParticleSystem bloodParticle;
     public AudioSource hitSound;
 
-    public float MaxRange = 5;
+    public float MaxRange;
     public float Range;
-    public int Damage = 50;
+    public int Damage;
 
-    public bool canAttack = false;
+    private bool canAttack;
+
+    void Start() {
+        MaxRange = 5;
+        Damage = 34;
+        canAttack = false;
+    }
 
     // Update is called once per frame
     void Update() {

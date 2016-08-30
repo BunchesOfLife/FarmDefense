@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\DestroyAudioSourceOnFinish.cs" />
      <Compile Include="Assets\Scripts\DestroyParticleSystemOnFinish.cs" />
      <Compile Include="Assets\Scripts\MeleeSystem.cs" />
+     <Compile Include="Assets\Scripts\ShootingSystem.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
  <Reference Include="UnityEngine.UI">
