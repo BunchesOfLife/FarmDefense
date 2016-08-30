@@ -4,7 +4,9 @@ using System.Collections;
 public class MeleeSystem : MonoBehaviour {
 
     public Camera MainCamera;
-    public GameObject bloodParticle;
+    public ParticleSystem bloodParticle;
+    public AudioSource hitSound;
+
     public float MaxRange = 5;
     public float Range;
     public int Damage = 50;
@@ -28,6 +30,8 @@ public class MeleeSystem : MonoBehaviour {
 
                     Quaternion prefabRot = Quaternion.FromToRotation(Vector3.up, hitRay.normal);
                     Instantiate(bloodParticle, hitRay.point, prefabRot);
+
+                    Instantiate(hitSound, hitRay.point, prefabRot);
 
                     canAttack = false;
                 }
