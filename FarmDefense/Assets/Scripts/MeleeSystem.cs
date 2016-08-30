@@ -4,6 +4,7 @@ using System.Collections;
 public class MeleeSystem : MonoBehaviour {
 
     public Camera MainCamera;
+    public GameObject bloodParticle;
     public float MaxRange = 5;
     public float Range;
     public int Damage = 50;
@@ -18,14 +19,16 @@ public class MeleeSystem : MonoBehaviour {
         }
 
         if (canAttack) {
-            print("Attack!");
-            print("b");
             RaycastHit hitRay;
             Transform CameraTransform = MainCamera.transform;
             if (Physics.Raycast(CameraTransform.position, CameraTransform.TransformDirection(Vector3.forward), out hitRay)) {
                 Range = hitRay.distance;
-                if (hitRay.distance < MaxRange) {
+                if (hitRay.collider.tag == "Enemy" && hitRay.distance < MaxRange) {
                     hitRay.transform.SendMessage("TakeDamage", Damage, SendMessageOptions.DontRequireReceiver);
+
+                    Quaternion prefabRot = Quaternion.FromToRotation(Vector3.up, hitRay.normal);
+                    Instantiate(bloodParticle, hitRay.point, prefabRot);
+
                     canAttack = false;
                 }
             }

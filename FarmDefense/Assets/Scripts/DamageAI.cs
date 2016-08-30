@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BasicAI : MonoBehaviour {
+public class DamageAI : MonoBehaviour {
 
     public int Health = 100;
 
